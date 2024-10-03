@@ -1,12 +1,12 @@
 (function($){
 	$(document).ready(function(){
 
-		$('.burger').append("<span class='burger__element'></span>");
-
-		let btn = $('.burger, .header-menu');
+		let btn = $('.burger');
+		let headerMenu = $('.header-menu');
 
 		btn.click(function(){
 			btn.toggleClass('active');
+			headerMenu.toggleClass('active');
 			$('body').toggleClass('lock');
 		});
 
