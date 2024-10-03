@@ -84,6 +84,21 @@ body.lock {
 	padding: 0 var(--gap-m);
 }
 
+h1 {
+	font-size: var(--title-size-s);
+	font-weight: bold;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	border-bottom: 2px solid rgba(149, 100, 170, .2);
+}
+
+a {
+	text-decoration: none;
+}
+
 @import 'burger';
 @import 'header';
+@import 'slick';
+@import 'section_offer';
+@import 'section_premium';
 @import 'footer';

@@ -1,0 +1,172 @@
+.section-offer {
+
+	.timer {
+		display: none;
+	}
+
+	.offer {
+
+		margin-bottom: 34px;
+
+		&__item {
+
+			width: calc(100% - 20px);
+			margin: 0 0 10px 20px;
+			padding-bottom: 15px;
+			position: relative;
+			display: flex;
+			height: 90px;
+			padding-right: 20px;
+			border-radius: 10px;
+			color: #000;
+			background: var(--color-violet-light);
+		
+			&::before {
+				position: absolute;
+				top: calc(50% - 30px);
+				left: -20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				content: 'One time offer!';
+				width: 123px;
+				height: 23px;
+				border-radius: 5px;
+				color: #000;
+				font-size: var(--text-size-l);
+				font-weight: bold;
+				background: var(--color-yellow);
+			}
+
+			&.super-offer {
+				background: var(--color-warm);
+
+				&::before {
+					content: 'Super offer!';
+				}
+			}
+
+		} // &__item
+
+		&__price {
+			width: 100%;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+		}	
+
+		&__credits {
+			margin-right: 5px;
+		}
+
+		&__credits,
+		&__value {
+			color: #fff;
+			font-size: var(--title-size-m);
+			font-weight: bold;
+		}	
+
+		&__icon {
+			width: 18px;
+			height: 18px;
+			padding-top: 1px;
+			padding-right: 1px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100%;
+			font-size: 8px;
+			font-weight: bold;
+			text-transform: uppercase;
+			background: var(--color-yellow);
+		} 
+
+		&__button {
+			display: none;
+		}
+
+	} // offer
+
+	.button-try {
+		width: 100%;
+		height: 55px;
+		margin: 0 auto 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		border-radius: 10px;
+		background: var(--color-yellow);
+	}
+
+	.terms-privacy {
+		display: flex;
+		gap: 10px;
+
+		font-size: var(--text-size-xs);
+		line-height: 16px;
+
+		a {
+			font-size: var(--text-size-xs);
+			color: var(--color-violet-light);
+		}
+
+		input {
+			display: none;
+
+			&:checked + label::after {
+				display: block;
+			}
+		}
+
+		&__checkbox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 20px;
+			height: 20px;
+			flex: 0 0 20px;
+			border-radius: 5px;
+			background: var(--color-violet-light);
+			
+			&::after {
+				display: none;
+				content: '';
+				width: 12px;
+				height: 8px;
+				background: url('../images/dest/icons/check.svg') no-repeat;
+			}
+
+			&:checked {
+				&::after {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.slick-dots {
+	
+		display: flex;
+		justify-content: center;
+		gap: 7px;
+
+		li {
+			display: flex;
+			width: 9px;
+			height: 9px;
+			border-radius: 9px;
+			border: 1px solid transparent;
+			background: var(--color-yellow);
+
+			&.slick-active {
+				border-color: var(--color-violet-light);
+			}
+		}
+
+		button { display: none; }
+	}
+
+}
