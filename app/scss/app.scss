@@ -1,3 +1,28 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../fonts/Ubuntu-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../fonts/Ubuntu-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../fonts/Ubuntu-Bold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+
 *, *::before, *::after {
 	padding: 0;
 	margin: 0;
@@ -8,10 +33,41 @@
 
 }
 
+:root {
+
+	--index: calc(1vw + 1vh);
+
+	--title-size-xl: 48px;
+	--title-size-l: 40px;
+	--title-size-m: 24px;
+	--title-size-s: 20px;
+
+	--text-size-xl: 16px;
+	--text-size-l: 14px;
+	--text-size-m: 13px;
+	--text-size-s: 12px;
+	--text-size-xs: 10px;
+
+	--color-violet: #684677;
+	--color-violet-light: #9564AA;
+	--color-pink: #C15CA1;
+	--color-warm: #AA6464;
+	--color-yellow: #FFCF2D;
+
+	--gap-xl: 35px;
+	--gap-l: 30px;
+	--gap-m: 20px;
+	--gap-s: 15px;
+
+} 
+
 html, body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	font-family: 'Ubuntu';
+	font-size: var(--text-size-xl);
+
 }
 
 body.lock {
@@ -22,18 +78,10 @@ body.lock {
 	}
 }
 
-:root {
-	--index: calc(1vw + 1vh);
-} 
-
 .container {
-	max-width: calc(1200px + (var(--index) * 2));
+	max-width: calc(1170px + (var(--gap-m) * 2));
 	margin: 0 auto;
-	padding: 0 var(--index);
-}
-
-.section {
-	padding: 120px 0;
+	padding: 0 var(--gap-m);
 }
 
 @import 'burger';
