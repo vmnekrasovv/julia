@@ -1,3 +1,83 @@
 .section-premium {
 	
+	.brilliant {
+		width: 83px;
+		height: 70px;
+		margin: 0 auto 13px;
+		background: url('../images/dest/icons/brilliant_large.svg') no-repeat;
+	}
+
+	.premium-list {
+		display: flex;
+		flex-wrap: wrap;
+
+		&__item {
+			width: 100%;
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		&__icon {
+			width: 30px;
+			height: 30px;
+			flex: 0 0 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 30px;
+			background: rgba(149, 100, 170, .1);
+		
+			&::after {
+				display: block;
+				content: '';
+				width: 16px;
+				height: 16px;
+			}
+
+			&.icon-message {
+				&::after {
+					background-image: url('../images/dest/icons/messages.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+			}
+
+			&.icon-eye {
+				&::after {
+					background-image: url('../images/dest/icons/eye.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+			}
+
+			&.icon-gift {
+				&::after {
+					background-image: url('../images/dest/icons/gift.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+			}
+
+			&.icon-heart {
+				&::after {
+					background-image: url('../images/dest/icons/heart.svg');
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+			}
+		} // icon
+
+		&__text {
+			color: var(--color-violet-light);
+			font-size: var(--text-size-m);
+			font-weight: bold;
+		}
+	}
+
 }
