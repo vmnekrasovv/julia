@@ -3,6 +3,7 @@
 	margin-bottom: 15px;
 	height: 50px;
 	background: var(--color-violet-light);
+	border-bottom: 2px solid var(--color-violet);
 
 	@media (min-width: 768px) {
 		height: 100px;
@@ -46,7 +47,6 @@
 		align-items: center;
 		gap: 20px;
 		background: var(--color-violet-light);
-		border-top: 1px solid #fff;
 		transition: .2s;
 
 		@media (min-width: 768px) {
