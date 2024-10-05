@@ -88,8 +88,16 @@ h1 {
 	font-size: var(--title-size-s);
 	font-weight: bold;
 	padding-bottom: 15px;
-	margin-bottom: 20px;
 	border-bottom: 2px solid rgba(149, 100, 170, .2);
+
+	@media (min-width: 576px) {
+		font-size: var(--title-size-m);
+		text-shadow: 2px 2px #ccc;
+	}
+
+	@media (min-width: 768px) {
+		font-size: var(--title-size-l);
+	}
 }
 
 a {

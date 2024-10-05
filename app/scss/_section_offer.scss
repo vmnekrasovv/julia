@@ -1,12 +1,93 @@
 .section-offer {
 
 	.timer {
+		
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px;
+		margin-top: 30px;
+		border-radius: 10px;
+		background: var(--color-pink);
+		
 		display: none;
+
+		@media (min-width: 768px) {
+			display: flex;
+			gap: 0px;
+			flex-wrap: wrap;
+		}
+
+		@media (min-width: 990px) {
+			flex-wrap: nowrap;
+			gap: 30px;
+		}	
+
+		&__title {
+			font-size: var(--title-size-l);
+			color: var(--color-yellow);
+			text-shadow:
+			 	2px 0 2px var(--color-violet), 
+				0 2px 2px var(--color-violet), 
+				-1px 0 1px var(--color-violet), 
+				0 -1px 1px var(--color-violet);
+
+			@media (min-width: 768px) {
+				flex: 0 0 100%;
+			}
+
+			@media (min-width: 990px) {
+				flex: 0 0 auto;
+			}			
+		}
+
+		&__text {
+			font-weight: bold;
+			color: #fff;
+			text-shadow:
+			 	2px 0 2px var(--color-violet), 
+				0 2px 2px var(--color-violet), 
+				-1px 0 1px var(--color-violet), 
+				0 -1px 1px var(--color-violet);
+
+			@media (max-width: 990px) {
+				font-size: var(--title-size-s);
+			}
+		}
+
+		&__nums {
+			width: 238px;
+			height: 56px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			background: #fff;
+			border-radius: 5px;
+			font-size: var(--title-size-l);
+
+		}
 	}
 
 	.offer {
-
 		margin-bottom: 34px;
+		
+		@media (min-width: 1200px) {
+			display: flex;
+			column-gap: 30px;
+			flex-wrap: wrap;
+			padding-top: 25px;
+		}
+
+		.slick-list {
+			padding-top: 25px;
+		}
+
+		.slick-track {
+			@media (min-width: 376px) {
+				margin-left: -10px;
+			}
+			
+		}
 
 		&__item {
 
@@ -18,8 +99,36 @@
 			height: 90px;
 			padding-right: 20px;
 			border-radius: 10px;
+			border: 2px solid var(--color-violet-light);
 			color: #000;
 			background: var(--color-violet-light);
+			transition: .2s background;
+
+			@media (min-width: 376px) {
+				height: 120px;
+				padding: 15px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				background: rgba(149, 100, 170, 0.1);
+
+				&:hover {
+					background: var(--color-violet-light);
+
+					.offer__credits {
+						color: #fff;
+					}
+
+					&::before {
+						display: flex;
+					}
+				}
+			}
+
+			@media (min-width: 1200px) {
+				margin: 0 0 15px 0;
+				width: calc((100% - 120px) / 5);
+			}
 		
 			&::before {
 				position: absolute;
@@ -36,10 +145,44 @@
 				font-size: var(--text-size-l);
 				font-weight: bold;
 				background: var(--color-yellow);
+
+				@media (min-width: 376px) {
+					display: none;
+					top: -12px;
+    				left: calc(50% - 60px);
+				}
 			}
 
 			&.super-offer {
+				border-color: var(--color-warm);
 				background: var(--color-warm);
+
+				&:hover {
+					background: var(--color-warm);
+				}
+
+				@media (min-width: 376px) {
+					background: rgba(170, 100, 100, 0.2);
+				}
+
+				@media (min-width: 1200px) {
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					gap: 40px;
+					width: 100%;
+					flex: 0 0 100%;
+
+					.offer__price {
+						flex: 0;
+					}
+
+					.offer__button {
+						width: 185px;
+						flex: 0 0 185px;
+					}
+					
+				}
 
 				&::before {
 					content: 'Super offer!';
@@ -53,6 +196,11 @@
 			display: flex;
 			align-items: flex-end;
 			justify-content: flex-end;
+
+			@media (min-width: 376px) {
+				flex: 1;
+				justify-content: center;
+			}
 		}	
 
 		&__credits {
@@ -64,13 +212,23 @@
 			color: #fff;
 			font-size: var(--title-size-m);
 			font-weight: bold;
+
+			@media (min-width: 376px) {
+				color: #000;
+			}
 		}	
+
+		&__value {
+			@media (min-width: 376px) {
+				display: none;
+			}
+		}
 
 		&__icon {
 			width: 18px;
 			height: 18px;
+			flex: 0 0 18px;
 			padding-top: 1px;
-			padding-right: 1px;
 			margin-right: 5px;
 			margin-bottom: 5px;
 			display: flex;
@@ -84,7 +242,28 @@
 		} 
 
 		&__button {
+			width: 100%;
+			height: 50px;
+			border-radius: 5px;
+			justify-content: center;
+			align-items: center;
+			font-weight: 500;
+
 			display: none;
+
+
+			@media (min-width: 376px) {
+				display: flex;
+				flex: 0 0 50px;
+				background: #fff;
+				color: #ccc;
+
+				&:hover {
+					background: var(--color-yellow);
+					color: #000;
+				}
+			}
+
 		}
 
 	} // offer
@@ -99,6 +278,10 @@
 		font-weight: bold;
 		border-radius: 10px;
 		background: var(--color-yellow);
+
+		@media (min-width: 576px) {
+			display: none;
+		}
 	}
 
 	.terms-privacy {

@@ -1,10 +1,15 @@
 .header	{
 
 	margin-bottom: 15px;
-	
+	height: 50px;
+	background: var(--color-violet-light);
+
+	@media (min-width: 768px) {
+		height: 100px;
+	}
+
 	.container {
-		height: 50px;
-		background: var(--color-violet-light);
+		height: 100%;
 	}
 
 	.navbar {
@@ -16,6 +21,15 @@
 
 	.logo {
 		display: none;
+		color: #fff;
+		font-size: var(--title-size-xl);
+		font-weight: bold;
+		margin-top: -12px;
+		text-shadow: 2px 2px var(--color-violet);
+
+		@media (min-width: 768px) {
+			display: block;
+		}
 	}
 
 	.header-menu {
@@ -35,6 +49,19 @@
 		border-top: 1px solid #fff;
 		transition: .2s;
 
+		@media (min-width: 768px) {
+			position: relative;
+			top: auto;
+			left: 0;
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 40px;
+			width: auto;
+			height: 100%;
+			padding-bottom: 0;
+			border-top: 1px solid transparent;
+		}
+
 		&.active {
 			left: 0;
 		}
@@ -44,9 +71,35 @@
 			color: #fff;
 			font-weight: bold;
 			font-size: var(--title-size-s);
+			text-shadow: 1px 1px var(--color-violet);
+			transition: .2s color;
 
-			&:last-child {
+			&:hover {
+				color: var(--color-yellow);
+			}
+
+			&.premium {
 				display: none;
+			}
+
+			@media (min-width: 768px) {
+				font-size: var(--text-size-xl);
+
+				&.premium {
+					width: auto;
+					height: auto;
+					display: block;
+					padding: 5px 44px 7px 15px;
+					border-radius: 10px;
+					background-color: var(--color-violet);
+					background-position: 90% center;
+					color: var(--color-yellow);
+					border: 1px solid var(--color-violet);
+
+					&:hover {
+						background-color: var(--color-pink);
+					}
+				}
 			}
 		}
 
@@ -59,5 +112,9 @@
 		position: relative;
 		z-index: 3;
 		background: url('../images/dest/icons/brilliant.svg') no-repeat;
+	
+		@media (min-width: 768px) {
+			display: none;
+		}
 	}
 }

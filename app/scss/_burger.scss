@@ -7,10 +7,11 @@
     position: relative;
     cursor: pointer;
     z-index: 3;
+    display: flex;
+	align-self: center;
 
-	@media (max-width: 767px) {
-		display: flex;
-		align-self: center;
+	@media (min-width: 768px) {
+		display: none;
 	}
 
 	&__element {
