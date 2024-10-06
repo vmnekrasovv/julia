@@ -1,5 +1,9 @@
 .section-offer {
 
+	.container {
+		padding: 0;
+	}
+
 	.timer {
 		
 		justify-content: space-between;
@@ -69,7 +73,7 @@
 	}
 
 	.offer {
-		margin-bottom: 34px;
+		margin-bottom: 14px;
 		
 		@media (min-width: 1200px) {
 			display: flex;
@@ -102,7 +106,16 @@
 			border: 2px solid var(--color-violet-light);
 			color: #000;
 			background: var(--color-violet-light);
-			transition: .2s background;
+			transition: .2s;
+
+			&:hover {
+
+				.offer__button {
+					background: var(--color-yellow);
+					color: #000;
+				}
+
+			}
 
 			@media (min-width: 376px) {
 				height: 120px;

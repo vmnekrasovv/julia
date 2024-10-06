@@ -1,11 +1,12 @@
 .section-premium {
 	
 	.container {
+		padding: 0;
+		
 		@media (min-width: 576px) {
 			width: 350px;
 			height: 340px;
 			position: relative;
-			padding: 0;
 		}
 	}
 
