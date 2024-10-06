@@ -70,6 +70,15 @@
 			font-size: var(--title-size-l);
 
 		}
+
+		&__hour,
+		&__min,
+		&__sec,
+		&__sepor {
+			&.warning {
+				color: red;
+			}
+		}
 	}
 
 	.offer {

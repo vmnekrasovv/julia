@@ -80,6 +80,8 @@ body.lock {
 
 body {
 
+	transition: 3s background;
+
 	@media (min-width: 1600px) {
 
 		&::before {
@@ -104,6 +106,21 @@ body {
 			width: 607px;
 			height: 803px;
 			background: url('../images/dest/pattern_right.png') no-repeat;
+		}
+	}
+
+	&.bg-red {
+
+
+		&::before {
+			opacity: .43;
+			background: url('../images/dest/pattern_left_red.png') no-repeat;
+		}
+
+		&::after {
+			opacity: .51;
+			height: 700px;
+			background: url('../images/dest/pattern_right_red.png') no-repeat;
 		}
 	}
 }
@@ -185,6 +202,9 @@ a {
 	}
 }
 
+.bg-red {
+	background: #920404;
+}
 
 @import 'burger';
 @import 'header';

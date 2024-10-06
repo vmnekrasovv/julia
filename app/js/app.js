@@ -75,6 +75,56 @@
 	});
 
 
+	function timer() {
+
+		let hourBox = $('.timer__hour');
+		let minBox = $('.timer__min');
+		let minVal = minBox.text();
+		let secBox = $('.timer__sec');
+		let secVal = secBox.text();
+		let timerSepor = $('.timer__sepor');
+
+		let timerNums = $('.timer__nums');
+		let numsItem = timerNums.find('span');
+
+
+		secVal--;
+
+		if(secVal < 0) {
+			minVal--;
+
+			if(minVal < 0){
+
+				$('body').html('').addClass('bg-red');
+
+				minBox.text('29');
+				secBox.text('59');
+
+				numsItem.each(function(i, el){
+					$(el).removeClass('warning');
+				});
+
+				return false;
+			}
+
+			if(minVal < 10) minVal = '0' + minVal;
+
+			if(minVal < 1){ 
+				numsItem.each(function(i, el){
+					$(el).addClass('warning');
+				});
+			}
+
+			minBox.text(minVal);
+			secBox.text('59');
+
+		} else {
+			if(secVal < 10) secVal = '0' + secVal;
+			secBox.text(secVal);
+		}	
+	}
+
+	setInterval(timer, 1000);
 
 
 })(jQuery);
