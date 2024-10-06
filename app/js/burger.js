@@ -11,4 +11,14 @@
 		});
 
 	});
+
+	$(window).on('resize', function(){
+		let wW = window.innerWidth;
+
+		if(wW > 767){
+			$('.burger').removeClass('active');
+			$('.header-menu').removeClass('active');
+		}
+	});
+
 })(jQuery);
