@@ -109,7 +109,7 @@ body {
 		}
 	}
 
-	&.bg-red {
+	&.bg-end {
 
 
 		&::before {
@@ -202,8 +202,8 @@ a {
 	}
 }
 
-.bg-red {
-	background: #920404;
+.bg-end {
+	background: #000;
 }
 
 @import 'burger';

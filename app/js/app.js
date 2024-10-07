@@ -95,7 +95,7 @@
 
 			if(minVal < 0){
 
-				$('body').html('').addClass('bg-red');
+				$('body').html('').addClass('bg-end');
 
 				minBox.text('29');
 				secBox.text('59');
