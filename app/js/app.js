@@ -11,8 +11,8 @@
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			swipeToSlide: true,
-			autoplay: false,
-			autoplaySpeed: 3000,
+			autoplay: true,
+			autoplaySpeed: 2000,
 			mobileFirst: true,
 			responsive: [
 			   {
